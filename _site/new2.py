@@ -2,6 +2,7 @@
 
 import sys
 import time
+import os
 
 front_matter = "---\ntitle: \ntags: []\n---";
 
