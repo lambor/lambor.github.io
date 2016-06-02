@@ -23,7 +23,7 @@ sass:
 
 # 其他配置
 include:            [ "robots.txt" ]
-exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile" ]
+exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "new2.py", "publish2.py"]
 gems:
   - jekyll-sitemap
 
