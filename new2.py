@@ -5,6 +5,7 @@ import time
 
 front_matter = "---\ntitle: \ntags: []\n---";
 
+directory = "_drafts"
 
 def getDate():
 	return time.strftime("%Y-%m-%d")
@@ -13,7 +14,7 @@ def getDate():
 def createFile():
 	print "create a new post markdown file."
 
-	fileName = "_drafts/" + time.ctime() + ".md"
+	fileName = directory + "/" + time.ctime() + ".md"
 
 	fileName = fileName.replace(" ","_")
 	fileName = fileName.replace(":","-")
@@ -28,6 +29,9 @@ def createFile():
 	except Exception, e:
 		raise e
 	
-if __name__ == "__main__": 
+if __name__ == "__main__":
+
+	if not os.path.exists(directory):
+		os.makedirs(directory)
 
 	createFile()

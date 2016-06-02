@@ -57,4 +57,7 @@ def publish():
 			raise e
 
 if __name__ == "__main__":
-	publish()
+
+	if os.path.exists(srcpath):
+
+		publish()
