@@ -1,6 +1,28 @@
-drakeet.github.io
+lambor.github.io
 
-Thanks Matthew Lee and his cute blog: [mthli.github.io](mthli.github.io)
+combination of [drakeet.github.io](drakeet.github.io) and [onlylemi.github.io](onlylemi.github.io)
+
+##### new
+
+create a draft markdown file into `_drafts` directory.
+
+```python
+python new2.py
+```
+
+
+##### edit
+
+edit the drafts.
+
+
+##### publish
+
+publish all drafts in the `_drafts` directory.
+
+```python
+python publish2.py
+```
 
 ===
 
