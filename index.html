@@ -18,6 +18,8 @@ layout: default
                 <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             </div>
 
+            {% include tag.html %}
+
         </li>
 
         {% endfor %}
