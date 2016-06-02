@@ -577,3 +577,12 @@ select[multiple].input-lg, textarea.input-lg {
     line-height: 1.5;
     border-radius: 3px
 }
+
+.sidebar-right {
+  width: 75px;
+  position: fixed;
+  top: 40%;
+  right: -5px;
+  text-align: center;
+  z-index: 2222;
+}
