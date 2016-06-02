@@ -1,26 +1,46 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      pygments
 
-# Permalinks
-permalink:        pretty
-# relative_permalinks: true
+title:              "n0body"
+description:        "r3ad book5"
 
-# Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
-baseurl:          /
+author_name:        "n0body"
+author_email:       
+twitter_username:   
 
-author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+baseurl:            ""
+permalink:          /:title
+timezone:           Asia/Shanghai
+encoding:           UTF-8
 
-paginate:         5
+highlighter:        rouge
+markdown:           kramdown
+kramdown:
+    input:          GFM
+sass:
+    style:          :compressed
 
-# Custom vars
-version:          2.1.0
+include:            [ "robots.txt" ]
+exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile" ]
+gems:
+  - jekyll-sitemap
 
-github:
-  repo:           https://github.com/poole/hyde
+compress_html:
+    clippings:      all
+    ingore:
+        envs:       [ "test" ]
+
+defaults:
+  -
+    scope:
+      path:         ""
+    values:
+      layout:       "null"
+  -
+    scope:
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      type:         "posts"
+    values:
+      layout:       "post"

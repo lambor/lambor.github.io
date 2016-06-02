@@ -1,0 +1,30 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import 'main';
+@import 'syntax';
+
+/***** sidebar right ******/
+
+.sidebar-right {
+  width: 75px;
+  position: fixed;
+  top: 40%;
+  right: -5px;
+  text-align: center;
+  z-index: 2222;
+}
+
+.sidebar-right div {
+  margin-bottom: 5px;
+  color: black;
+}
+
+.sidebar-right i {
+  cursor: pointer;
+}
+
+.sidebar-right div:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
