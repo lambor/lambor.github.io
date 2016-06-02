@@ -1,5 +1,5 @@
 ---
-title: 我的第一篇
+title: hello-world
 tags: [ hello_world ]
 ---
 
