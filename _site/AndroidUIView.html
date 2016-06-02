@@ -1,0 +1,26 @@
+<html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Androiduiview</title><meta name="twitter:card" content="summary" /><meta name="twitter:site" content="@drak11t" /><meta name="twitter:title" content="Androiduiview" /><meta name="twitter:description" content="前不久开始自学 Swift 并且开始开发 iOS App，发现 iOS 的 UIButton 有个特性特别喜欢，就是你只需要设置按钮的背景图片即可自动带有按下去按钮变暗的效果，而 Android 如果要做到一样的效果，通常都需要写一个 XML 文件，写 selector，而且设计师也要配合着做两种状态的图，即正常状态的图 + 按钮被按下去的状态图。 所以觉得 iOS 的这个 UIButton..."><meta name="description" content="前不久开始自学 Swift 并且开始开发 iOS App，发现 iOS 的 UIButton 有个特性特别喜欢，就是你只需要设置按钮的背景图片即可自动带有按下去按钮变暗的效果，而 Android 如果要做到一样的效果，通常都需要写一个 XML 文件，写 selector，而且设计师也要配合着做两种状态的图，即正常..."><link rel="icon" href="/assets/favicon.png"><link rel="apple-touch-icon" href="/assets/gravatar.png"><link rel="stylesheet" href="//code.cdn.mozilla.net/fonts/fira.css"><link rel="stylesheet" href="/assets/core.css"><link rel="canonical" href="/AndroidUIView"><link rel="alternate" type="application/atom+xml" title="Black history of Drakeet" href="/feed.xml" /></head><body><aside class="logo"> <a href="/"> <img class="gravatar" width="80px" height="80px" src="/assets/gravatar.png"> </a> <span class="logo-prompt">返回</span></aside><main> <noscript><style> article .footnotes { display: block; }</style></noscript><article><div class="center"><h1>Androiduiview</h1><time>3 28, 2015</time></div><div class="divider"></div><p>前不久开始自学 Swift 并且开始开发 iOS App，发现 iOS 的 <code class="highlighter-rouge">UIButton</code> 有个特性特别喜欢，就是你只需要设置按钮的背景图片即可自动带有按下去按钮变暗的效果，而 Android 如果要做到一样的效果，通常都需要写一个 XML 文件，写 <code class="highlighter-rouge">selector</code>，而且设计师也要配合着做两种状态的图，即正常状态的图 + 按钮被按下去的状态图。 所以觉得 iOS 的这个 <code class="highlighter-rouge">UIButton</code> 这点非常实在（=。=），便简单仿造着做了个 <code class="highlighter-rouge">AndroidUIView</code>，并且提供了 XML 自定义接口，可以设置按下去蒙版的颜色、透明度、形状，还有圆角：</p><p><img class="alignnone wp-image-853" src="/assets/img/2015-03-28-AndroidUIView-1.png" alt="s1" width="171" height="304" /> <img class="alignnone wp-image-852" src="/assets/img/2015-03-28-AndroidUIView-2.png" alt="s2" width="171" height="304" /></p><p>分别是正常状态图和按下去之后的状态图</p><p><a title="drakeet/AndroidUIView" href="https://github.com/drakeet/AndroidUIView" target="_blank">https://github.com/drakeet/AndroidUIView</a></p><h3>使用方法：</h3><ol><li>Gradle</li></ol><div class="highlighter-rouge"><pre class="highlight"><code><span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">compile</span> <span class="s1">'me.drakeet.library:androiduiview:1.0.0'</span>
+<span class="o">}</span>
+</code></pre></div><ol><li>在布局 XML 文件中根节点添加命名空间：</li></ol><div class="highlighter-rouge"><pre class="highlight"><code>xmlns:drakeet="http://schemas.android.com/apk/res-auto"
+</code></pre></div><ol><li>之后就可以愉快地使用了，如下（也可以参考截图）：</li></ol><div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;me.drakeet.library.UIButton</span>
+    <span class="na">android:layout_width=</span><span class="s">"64dp"</span>
+    <span class="na">android:layout_height=</span><span class="s">"64dp"</span>
+    <span class="na">android:layout_margin=</span><span class="s">"16dp"</span>
+    <span class="na">drakeet:alpha_pressed=</span><span class="s">"80"</span>
+    <span class="na">drakeet:color_pressed=</span><span class="s">"#660303ff"</span>
+    <span class="na">android:background=</span><span class="s">"@mipmap/ic_launcher"</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;me.drakeet.library.UIButton</span>
+    <span class="na">android:layout_width=</span><span class="s">"64dp"</span>
+    <span class="na">android:layout_height=</span><span class="s">"64dp"</span>
+    <span class="na">android:layout_margin=</span><span class="s">"16dp"</span>
+    <span class="na">drakeet:shape_type=</span><span class="s">"round"</span>
+    <span class="na">android:background=</span><span class="s">"@mipmap/avatar"</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;me.drakeet.library.UIImageView</span>
+    <span class="na">android:layout_width=</span><span class="s">"64dp"</span>
+    <span class="na">android:layout_height=</span><span class="s">"64dp"</span>
+    <span class="na">android:layout_margin=</span><span class="s">"16dp"</span>
+    <span class="na">drakeet:shape_type=</span><span class="s">"round"</span>
+    <span class="na">android:src=</span><span class="s">"@mipmap/avatar2"</span><span class="nt">/&gt;</span>
+</code></pre></div><h3>自定义属性：</h3><ul><li><code class="highlighter-rouge">drakeet:alpha_pressed</code> [integer 默认:48 0-255] -&gt; Alpha of the cover color when pressed</li><li><code class="highlighter-rouge">drakeet:color_pressed</code> [color 默认:#9c000000] -&gt; Color of the cover when pressed</li><li><code class="highlighter-rouge">drakeet:shape_type</code> [enum (rectangle, round) 默认:rectangle] -&gt; Rectangle or round of cover shape</li><li><code class="highlighter-rouge">drakeet:radius</code> [dimension 默认:2dp] -&gt; Add a radius to the cover</li></ul><p><a title="示例 apk" href="https://github.com/drakeet/AndroidUIView/blob/master/sample/sample-release.apk" target="_blank">Demo apk 下载</a></p></article></main></body></html>
