@@ -2,7 +2,7 @@ lambor.github.io
 
 combination of [drakeet.github.io](drakeet.github.io) and [onlylemi.github.io](onlylemi.github.io)
 
-##### new
+##### New
 
 create a draft markdown file into `_drafts` directory.
 
@@ -11,18 +11,31 @@ python new2.py
 ```
 
 
-##### edit
+##### Edit
 
 edit the drafts.
 
+```
+---
+title: Your Article Title
+tags: [ your, article, tags ]
+filename: your-markdown-file-name
+---
 
-##### publish
+Here is your article content.
+```
+
+
+##### Publish
 
 publish all drafts in the `_drafts` directory.
 
 ```python
 python publish2.py
 ```
+
+You will publish markdown file `year-month-day-your-markdown-file-name.md` into `_posts` directory.
+
 
 ===
 
