@@ -4,7 +4,7 @@ import sys
 import time
 import os
 
-front_matter = "---\ntitle: \ntags: []\n---";
+front_matter = "---\ntitle: \ntags: []\nfilename: \n---";
 
 directory = "_drafts"
 

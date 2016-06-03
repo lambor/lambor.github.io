@@ -23,7 +23,7 @@ def getFileName(file):
 			front_matter = True
 			line = line[3:]
 
-		match = re.search('(?<=title:\s).*',line)
+		match = re.search('(?<=filename:\s).*',line)
 		if match is None:
 			continue
 		title = match.group(0)
