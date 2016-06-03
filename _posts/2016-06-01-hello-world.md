@@ -1,6 +1,7 @@
 ---
-title: hello-world
+title: hello world
 tags: [hello-world]
+filname: hello-world
 ---
 
 我的第一篇
