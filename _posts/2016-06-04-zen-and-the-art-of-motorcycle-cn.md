@@ -1,5 +1,5 @@
 ---
-title: 禅与摩托车维修艺术*中文版一周目
+title: 禅与摩托车维修艺术
 tags: [ 禅与摩托车维修艺术,哲学,中文 ]
 filename: zen-and-the-art-of-motorcycle-cn
 ---
