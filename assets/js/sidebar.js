@@ -1,10 +1,11 @@
 $(document).ready(function() {
-
+  var hash = window.location.hash;
+  $(hash).css('color','#700')
 	/* sidebar-right */
     $(".js-scroll-top").click(function() {
         $("html,body").animate({ scrollTop: 0}, 1000)
     });
-    
+
     $(".js-scroll-down").click(function() {
         $("html,body").animate({ scrollTop: $("#footer").offset().top }, 1000)
     });
