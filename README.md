@@ -1,6 +1,6 @@
 lambor.github.io
 
-combination of [drakeet.github.io](drakeet.github.io) and [onlylemi.github.io](onlylemi.github.io)
+combination of [drakeet.github.io](https://github.com/drakeet/drakeet.github.io) and [onlylemi.github.io](https://github.com/onlylemi/onlylemi.github.io)
 
 ##### New
 
