@@ -13,7 +13,7 @@ permalink: /tags/
             
             {% for post in tag[1] %}
 
-                <li>
+                <li id="{{ tag[0] }}li" style="padding: 5px">
 
                 <div class="post-date">
                     <span>{{ post.date | date: "%b %d, %Y" }}</span>
